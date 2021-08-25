@@ -8,6 +8,19 @@
     $(function(){
         $("button#stopBtn").hide();
         $("button#finishBtn").hide();
+
+        for (let i=0; i<=30; i++) {
+            const line = document.createElement('div');
+            if(i%5==0){
+                line.classList.add('line2');
+            }
+            else {
+                line.classList.add('line1');
+            }
+            line.style.transform = `rotate(${6 * i}deg)`;
+            $("div#mainClock").append(line);
+        };
+
     })
 </script>
 
@@ -29,7 +42,16 @@
             <button class="btn btn-danger btn-lg button" id="stopBtn" type="button" onclick="func_stop">Stop</button>
             <button class="btn btn-danger btn-lg button" id="finishBtn" type="button">Finish</button>
         </div>
-        <div id="clock"></div>
+        <div id="clockContainer">
+            <div id="mainClock">
+                <div class="centerCircle" id="centerCircle1"></div>
+                <div class="centerCircle" id="centerCircle2"></div>
+                <div class="centerCircle" id="centerCircle3"></div>
+                <div class="centerCircle" id="centerCircle4"></div>
+                <div class="centerCircle" id="timerCircle"></div>
+            </div>
+
+        </div>
     </div>
 </body>
 </html>
