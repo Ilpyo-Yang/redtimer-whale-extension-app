@@ -21,62 +21,71 @@ header{
   float: left;
 }
 
+
+/* 타이머 설정하는 구간 */
 #timeSetting{
-  margin: 0 20px;
+  width: 70%;
+  margin: 0 auto;
 }
 #timeInput{
-  width: 65%;
-  margin-right: 15px;
   float: left;
-  padding-left: 30% !important;
-  font-size: 16pt !important;
-  font-weight: bold !important;
+  font-size: 16pt;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
 }
-.button{
-  width: 30% !important;
+.settingBtn{
+  color: white;
+  font-weight: bold;
+  background-color: #FB2A2A;
+}
+span#min{
+  font-weight: bold;
+  background-color: white;
 }
 
 
+
+/* 타이머 */
 #clockContainer{
-  margin: 50px auto;
-  width: 250px;
-  height: 250px;
+  margin: 15px auto;
+  width: 300px;
+  height: 300px;
 }
 #mainClock{
   border-radius: 50%;
   position: relative;
 }
-.line1{
+.line{
   border-top: 2px solid black;
-  width: 250px;
+  width: 220px;
   position: absolute;
   margin-top: 50%;
+  margin-left: 13%;
+}
+.line1{
   z-index: 1;
 }
 .line2{
-  border-top: 2px solid black;
-  width: 250px;
-  position: absolute;
-  margin-top: 50%;
   z-index: 3;
 }
 .centerCircle{
   border: 1px solid white;
   border-radius: 50%;
   margin-top: 50%;
+  margin-left: 49.5%;
   position: absolute;
-  display: inline-block;
   background-color: #ffffff;
   transform: translate(-50%, -50%);
 }
 #centerCircle1{
-  width: 230px;
-  height: 230px;
+  width: 200px;
+  height: 200px;
   z-index: 2;
 }
 #centerCircle2{
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   z-index: 4;
 }
 #centerCircle3{
@@ -94,14 +103,24 @@ header{
   border: 1px solid black;
 }
 #timerCircle{
-  width: 240px;
-  height: 240px;
+  width: 210px;
+  height: 210px;
   z-index: 6;
   background-color: #ff8282;
   opacity: 0.5;
 }
+.number{
+  width: 28px;
+  height: 300px;
+  position: absolute;
+  margin-left: 45%;
+  font-weight: bold;
+  font-size: 18pt;
+  z-index: 7;
+}
 
 
+/* 기록리스트 구간 */
 #recodes{
   width: 90%;
   float: right;
@@ -118,8 +137,8 @@ header{
 #recodes span{
   line-height: 30px;
 }
-.listDetail{
+.upDown{
+  width: 20px;
   float: right;
-  font-weight: bold;
-  color: white;
+  margin-top: 2.5%;
 }
