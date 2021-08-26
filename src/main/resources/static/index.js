@@ -14,8 +14,8 @@ function func_clock(){
   }
   for (let i=0; i<12; i++) {
     let number = document.createElement('div');
-    number.style.transform = `rotate(${30 * i}deg)`;
-    number.innerHTML="<span class='timerNum' style='transform: none'>"+i*5+"</span>";
+    number.style.transform = `rotate(${30*i}deg)`;
+    number.innerHTML="<div class='timerNum' style='transform: rotate("+-30*i+"deg)'>"+i*5+"</div>";
     number.classList.add('number');
     $("div#mainClock").append(number);
   }

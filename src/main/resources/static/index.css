@@ -3,10 +3,12 @@
   width: 25%;
   height: 100%;
   float: right;
-  padding: 30px 20px;
   display: inline-block;
   text-align: center;
   background-color: white;
+}
+#container2{
+  padding: 30px 20px;
 }
 
 header{
@@ -122,13 +124,11 @@ span#min{
 
 /* 기록리스트 구간 */
 #recodes{
-  width: 90%;
-  float: right;
+  width: 100%;
   display: inline-block;
   background-color: #FB2A2A;
   height: 35px;
   padding: 0 20px;
-  margin-right: 5%;
   font-size: 12pt;
   font-weight: bold;
   text-align: left;
