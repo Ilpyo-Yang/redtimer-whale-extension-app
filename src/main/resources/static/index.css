@@ -38,8 +38,7 @@ header{
 
 
 #clockContainer{
-  border: 1px solid black;
-  margin: 80px auto;
+  margin: 50px auto;
   width: 250px;
   height: 250px;
 }
@@ -100,4 +99,27 @@ header{
   z-index: 6;
   background-color: #ff8282;
   opacity: 0.5;
+}
+
+
+#recodes{
+  width: 90%;
+  float: right;
+  display: inline-block;
+  background-color: #FB2A2A;
+  height: 35px;
+  padding: 0 20px;
+  margin-right: 5%;
+  font-size: 12pt;
+  font-weight: bold;
+  text-align: left;
+  color: white;
+}
+#recodes span{
+  line-height: 30px;
+}
+.listDetail{
+  float: right;
+  font-weight: bold;
+  color: white;
 }
