@@ -40,6 +40,7 @@ header{
   color: white;
   font-weight: bold;
   background-color: #FB2A2A;
+  cursor: pointer;
 }
 span#min{
   font-weight: bold;
@@ -110,6 +111,7 @@ span#min{
   z-index: 6;
   background-color: #ff8282;
   opacity: 0.5;
+  border-radius: 120px 0 0 0;
 }
 .number{
   width: 28px;

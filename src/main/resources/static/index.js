@@ -22,7 +22,16 @@ function func_clock(){
 }
 
 // start 버튼을 눌렀을 때
-function func_start(){}
+function func_start(){
+  let startBtn = $("#start");
+  if(startBtn==null){
+    $("#timeInput").innerText("15");
+  } else {
+
+  }
+}
 
 // stop 버튼을 눌렀을 때
-function func_stop(){}
+function func_stop(){
+
+}
