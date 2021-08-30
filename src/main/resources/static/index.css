@@ -105,14 +105,16 @@ span#min{
   background-color: #FB2A2A;
   border: 1px solid black;
 }
-#timerCircle{
-  width: 210px;
-  height: 210px;
-  z-index: 6;
-  background-color: #ff8282;
+.rotation{
+  border-top: 1px solid #ff8282;
+  width: 105px;
+  position: absolute;
+  margin-top: 50%;
+  margin-left: 14%;
   opacity: 0.5;
-  border-radius: 120px 0 0 0;
+  z-index: 6;
 }
+
 .number{
   width: 28px;
   height: 300px;
