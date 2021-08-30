@@ -50,16 +50,29 @@ function func_inputTime(){
 }
 
 
+// timer 진행을 나타내는 함수
+function func_timer(){
+  let timeInput = $("#timeInput").val();
+  $("#timeInput").val(timeInput-1);
+  func_inputTime();
+}
+
 // start 버튼을 눌렀을 때
 function func_start(){
   let timeInput = $("#timeInput").val();
   if(timeInput==null||timeInput==""||timeInput=="0"){
     alert("타이머 값을 설정해주세요");
-  } else if(timeInput=="0"){
-
+  } else {
+    $("span#start").hide();
+    $("span#stop").show();
+    if(timeInput>0){
+      setInterval("func_timer()", 60000);
+    }
+    else if(timeInput==0){
+      $("span#stop").hide();
+      $("span#restart").show();
+    }
   }
-
-
 }
 
 // stop 버튼을 눌렀을 때
