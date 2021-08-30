@@ -35,9 +35,9 @@ function func_inputTime(){
     $("#timeInput").val("60");
     timeInput=60;
   }
-  else if(timeInput<1){
-    $("#timeInput").val("1");
-    timeInput=1;
+  else if(timeInput<0){
+    $("#timeInput").val("0");
+    timeInput=0;
   }
   for (let i=0; i<720; i++) {
     if(i>12*timeInput) break;
@@ -50,32 +50,46 @@ function func_inputTime(){
 }
 
 
+let interval; // timer interval
+let startingTime; // start 설정한 값
+
 // timer 진행을 나타내는 함수
 function func_timer(){
   let timeInput = $("#timeInput").val();
-  $("#timeInput").val(timeInput-1);
-  func_inputTime();
+  if(timeInput==0){
+    clearInterval(interval);
+    $("span#stop").hide();
+    $("span#restart").show();
+  }
+  else if(timeInput>0){
+    $("#timeInput").val(timeInput-1);
+    func_inputTime();
+  }
 }
+
 
 // start 버튼을 눌렀을 때
 function func_start(){
   let timeInput = $("#timeInput").val();
+  startingTime = timeInput;
   if(timeInput==null||timeInput==""||timeInput=="0"){
     alert("타이머 값을 설정해주세요");
   } else {
     $("span#start").hide();
     $("span#stop").show();
-    if(timeInput>0){
-      setInterval("func_timer()", 60000);
-    }
-    else if(timeInput==0){
+    interval = setInterval("func_timer()", 1000);
+    if(timeInput<0){
+      clearInterval(interval);
       $("span#stop").hide();
       $("span#restart").show();
     }
   }
 }
 
+
 // stop 버튼을 눌렀을 때
 function func_stop(){
-
+  clearInterval(interval);
+  $("span#stop").hide();
+  $("span#start").show();
 }
