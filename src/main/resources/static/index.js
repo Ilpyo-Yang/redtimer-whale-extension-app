@@ -33,6 +33,11 @@ function func_inputTime(){
   let timeInput = $("#timeInput").val();
   if(timeInput>60){
     $("#timeInput").val("60");
+    timeInput=60;
+  }
+  else if(timeInput<1){
+    $("#timeInput").val("1");
+    timeInput=1;
   }
   for (let i=0; i<720; i++) {
     if(i>12*timeInput) break;
