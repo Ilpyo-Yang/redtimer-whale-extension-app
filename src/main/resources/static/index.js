@@ -39,11 +39,11 @@ function func_inputTime(){
     $("#timeInput").val("0");
     timeInput=0;
   }
-  for (let i=0; i<720; i++) {
-    if(i>12*timeInput) break;
+  for (let i=0; i<1440; i++) {
+    if(i>24*timeInput) break;
     const rotationSpace = document.createElement('div');
     rotationSpace.classList.add('rotation');
-    rotationSpace.style.transform = `rotate(${90-i / 2}deg)`;
+    rotationSpace.style.transform = `rotate(${90-i / 4}deg)`;
     rotationSpace.style.transformOrigin= `right bottom`;
     $("div#timerCircle").append(rotationSpace);
   }

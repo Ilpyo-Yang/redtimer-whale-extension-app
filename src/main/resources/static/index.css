@@ -1,5 +1,5 @@
 #container{
-  border: solid 1px #298a3d;
+  border: solid 1px #e3242b;
   width: 25%;
   height: 100%;
   text-align: center;
@@ -7,7 +7,7 @@
   margin: 0 auto;
 }
 #container2{
-  padding: 30px 20px;
+  padding: 20px 20px 10px 20px;
 }
 
 header{
@@ -15,6 +15,7 @@ header{
   font-size: 15pt;
   font-weight: bold;
   text-align: left;
+  color: #e3242b;
 }
 #logo{
   width: 30px;
@@ -39,7 +40,7 @@ header{
 .settingBtn{
   color: white;
   font-weight: bold;
-  background-color: #298a3d;
+  background-color: #e3242b;
   cursor: pointer;
 }
 span#min{
@@ -102,16 +103,16 @@ span#min{
   width: 20px;
   height: 20px;
   z-index: 7;
-  background-color: #298a3d;
+  background-color: white;
   border: 1px solid black;
 }
 .rotation{
-  border-top: 1px solid #298a3d;
+  border-top: 2px solid #e62117;
   width: 105px;
   position: absolute;
   margin-top: 50%;
   margin-left: 14.5%;
-  opacity: 0.5;
+  opacity: 0.3;
   z-index: 6;
 }
 
@@ -130,13 +131,13 @@ span#min{
 #recodes{
   width: 100%;
   display: inline-block;
-  background-color: #298a3d;
+  border-bottom: 2px solid #e62117;
   height: 35px;
   padding: 0 20px;
   font-size: 12pt;
   font-weight: bold;
   text-align: left;
-  color: white;
+  color: #e62117;
 }
 #recodes span{
   line-height: 30px;
@@ -156,7 +157,7 @@ span#min{
   vertical-align: middle;
 }
 .modal-content{
-  background-color: #298a3d;
+  background-color: #e62117;
   color: white;
   padding: 7px;
   font-size: 11pt;
