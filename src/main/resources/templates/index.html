@@ -9,7 +9,7 @@
     $(function(){
         $("span#stop").hide();
         $("span#restart").hide();
-        $("i#up").hide();
+        $("i#down").hide();
         func_clock();
         func_inputTime();
         $("#recodeRequest").hide();
@@ -52,6 +52,19 @@
                 <i class="fas fa-chevron-down upDown" id="down"></i>
                 <i class="fas fa-chevron-up upDown" id="up"></i>
             </div>
+            <div id="recodeList">
+                <table class="table table-sm">
+                    <thead>
+                        <th>No.</th>
+                        <th>날짜</th>
+                        <th>제목</th>
+                        <th>타이머시간</th>
+                    </thead>
+                    <tbody>
+                        <tr id="recodeListDetail"></tr>
+                    </tbody>
+                </table>
+            </div>
         </footer>
     </div>
 
@@ -60,11 +73,11 @@
             <span class="out" id="closeModal" data-dismiss="modal" onclick="$('#recodeRequest').fadeOut();">X</span>
             <span>설정한 시간이 끝났습니다!<br>기록을 남기려면 아래 제목을 적어주세요.</br></span>
             <div class="input-group mb-3" id="recodeSave">
-                <input class="form-control" id="recodeInput" type="text" value="RECODE_01"  onchange="func_recode()">
-                <span class="input-group-text" id="recodeBtn">기록</span>
+                <input class="form-control" id="recodeInput" type="text" placeholder="RECODE_01"  onchange="func_recode()">
+                <span class="input-group-text" id="recodeBtn" onclick="func_recode()">기록</span>
             </div>
-
         </div>
     </div>
+
 </body>
 </html>

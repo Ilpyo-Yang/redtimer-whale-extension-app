@@ -178,5 +178,11 @@ span#min{
 #recodeBtn{
   width: 30%;
   padding: 3px 0;
-
+  cursor: pointer;
+}
+table{
+  font-size: 10pt !important;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
 }

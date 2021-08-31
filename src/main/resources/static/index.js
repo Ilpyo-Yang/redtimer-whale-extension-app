@@ -107,5 +107,11 @@ function func_restart(){
 
 // recode 제목을 입력하고 기록한 경우
 function func_recode(){
-
+  $("#recodeRequest").fadeOut();
+  let recodeInput = $("#recodeInput");
+  let detail = "<td>1</td>"
+            + "<td>date</td>"
+            + "<td>"+recodeInput+"</td>"
+            + "<td>"+startingTime+"</td>";
+  $("tr#recodeListDetail").append(detail);
 }
