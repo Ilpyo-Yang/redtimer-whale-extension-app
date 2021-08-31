@@ -12,6 +12,7 @@
         $("img#up").hide();
         func_clock();
         func_inputTime();
+        $("#recodeRequest").fadeOut();
     })
 </script>
 
@@ -26,7 +27,7 @@
     <div id="container">
         <div id="container2">
             <header>
-                <img id="logo" src="../image/logo.jpg"/>TimeTimer
+                <img id="logo" src="../image/logo.jpg"/>Olive Timer
             </header>
             <div class="input-group mb-3" id="timeSetting">
                 <input class="form-control" id="timeInput" type="number" value="15" min="0" max="60" onchange="func_inputTime()">
@@ -54,5 +55,16 @@
         </footer>
     </div>
 
+    <div class="modal" id="recodeRequest">  <!--기록저장여부 모달창-->
+        <div class="modal-content modal-xs">
+            <span class="out" id="closeModal" data-dismiss="modal" onclick="$('#recodeRequest').fadeOut();">X</span>
+            <span>설정한 시간이 끝났습니다!<br>기록을 남기려면 아래 제목을 적어주세요.</br></span>
+            <div class="input-group mb-3" id="recodeSave">
+                <input class="form-control" id="recodeInput" type="text" value="RECODE_01"  onchange="func_recode()">
+                <span class="input-group-text" id="recodeBtn">기록</span>
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>

@@ -59,7 +59,9 @@ function func_timer(){
   if(timeInput==0){
     clearInterval(interval);
     $("span#stop").hide();
+    $("span#start").show();
     $("span#restart").show();
+    $("#recodeRequest").fadeIn();
   }
   else if(timeInput>0){
     $("#timeInput").val(timeInput-1);
@@ -76,6 +78,7 @@ function func_start(){
     alert("타이머 값을 설정해주세요");
   } else {
     $("span#start").hide();
+    $("span#restart").hide();
     $("span#stop").show();
     interval = setInterval("func_timer()", 1000);
   }
@@ -86,6 +89,7 @@ function func_start(){
 function func_stop(){
   clearInterval(interval);
   $("span#stop").hide();
+  $("span#restart").hide();
   $("span#start").show();
 }
 
@@ -93,8 +97,15 @@ function func_stop(){
 // restart 버튼을 눌렀을 때
 function func_restart(){
   $("span#restart").hide();
+  $("span#start").hide();
   $("span#stop").show();
   $("#timeInput").val(startingTime);
   func_inputTime();
   func_start();
+}
+
+
+// recode 제목을 입력하고 기록한 경우
+function func_recode(){
+
 }

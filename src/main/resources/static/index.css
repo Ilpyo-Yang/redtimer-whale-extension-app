@@ -1,11 +1,10 @@
 #container{
-  border: solid 1px #FB2A2A;
+  border: solid 1px #298a3d;
   width: 25%;
   height: 100%;
-  float: right;
-  display: inline-block;
   text-align: center;
   background-color: white;
+  margin: 0 auto;
 }
 #container2{
   padding: 30px 20px;
@@ -26,10 +25,11 @@ header{
 
 /* 타이머 설정하는 구간 */
 #timeSetting{
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 }
 #timeInput{
+  width: 15%;
   float: left;
   font-size: 16pt;
   font-weight: bold;
@@ -39,7 +39,7 @@ header{
 .settingBtn{
   color: white;
   font-weight: bold;
-  background-color: #FB2A2A;
+  background-color: #298a3d;
   cursor: pointer;
 }
 span#min{
@@ -102,11 +102,11 @@ span#min{
   width: 20px;
   height: 20px;
   z-index: 7;
-  background-color: #FB2A2A;
+  background-color: #298a3d;
   border: 1px solid black;
 }
 .rotation{
-  border-top: 1px solid #ff8282;
+  border-top: 1px solid #298a3d;
   width: 105px;
   position: absolute;
   margin-top: 50%;
@@ -130,7 +130,7 @@ span#min{
 #recodes{
   width: 100%;
   display: inline-block;
-  background-color: #FB2A2A;
+  background-color: #298a3d;
   height: 35px;
   padding: 0 20px;
   font-size: 12pt;
@@ -145,4 +145,37 @@ span#min{
   width: 20px;
   float: right;
   margin-top: 2.5%;
+}
+
+.modal{
+  top: 30%;
+  left: 40%;
+  width: 20%;
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.modal-content{
+  background-color: #298a3d;
+  color: white;
+  padding: 7px;
+  font-size: 11pt;
+}
+#closeModal{
+  text-align: right;
+}
+#recodeSave{
+  width: 80%;
+  margin: 15px auto;
+}
+#recodeInput, #recodeBtn{
+  display: inline-block;
+  font-size: 11pt;
+  font-weight: bold;
+  height: 30px;
+}
+#recodeBtn{
+  width: 30%;
+  padding: 3px 0;
+
 }
