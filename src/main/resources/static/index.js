@@ -78,11 +78,6 @@ function func_start(){
     $("span#start").hide();
     $("span#stop").show();
     interval = setInterval("func_timer()", 1000);
-    if(timeInput<0){
-      clearInterval(interval);
-      $("span#stop").hide();
-      $("span#restart").show();
-    }
   }
 }
 
@@ -92,4 +87,14 @@ function func_stop(){
   clearInterval(interval);
   $("span#stop").hide();
   $("span#start").show();
+}
+
+
+// restart 버튼을 눌렀을 때
+function func_restart(){
+  $("span#restart").hide();
+  $("span#stop").show();
+  $("#timeInput").val(startingTime);
+  func_inputTime();
+  func_start();
 }
