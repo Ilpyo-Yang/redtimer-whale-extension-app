@@ -49,8 +49,8 @@
         <footer> <!--타이머 내용기록-->
             <div id="recodes">
                 <span>Recodes</span>
-                <i class="fas fa-chevron-down upDown" id="down"></i>
-                <i class="fas fa-chevron-up upDown" id="up"></i>
+                <i class="fas fa-chevron-down upDown" id="down" onclick="func_down()"></i>
+                <i class="fas fa-chevron-up upDown" id="up" onclick="func_up()"></i>
             </div>
             <div id="recodeList">
                 <table class="table table-sm">
@@ -60,9 +60,7 @@
                         <th>제목</th>
                         <th>타이머시간</th>
                     </thead>
-                    <tbody>
-                        <tr id="recodeListDetail"></tr>
-                    </tbody>
+                    <tbody></tbody>
                 </table>
             </div>
         </footer>
