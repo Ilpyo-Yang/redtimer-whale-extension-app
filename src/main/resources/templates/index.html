@@ -9,7 +9,7 @@
     $(function(){
         $("span#stop").hide();
         $("span#restart").hide();
-        $("img#up").hide();
+        $("i#up").hide();
         func_clock();
         func_inputTime();
         $("#recodeRequest").hide();
@@ -49,8 +49,8 @@
         <footer> <!--타이머 내용기록-->
             <div id="recodes">
                 <span>Recodes</span>
-                <img src="../image/caret-square-down-regular.svg" class="upDown" id="down"/>
-                <img src="../image/caret-square-up-regular.svg" class="upDown" id="up"/>
+                <i class="fas fa-chevron-down upDown" id="down"></i>
+                <i class="fas fa-chevron-up upDown" id="up"></i>
             </div>
         </footer>
     </div>
