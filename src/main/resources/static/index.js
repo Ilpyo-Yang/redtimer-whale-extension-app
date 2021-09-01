@@ -85,6 +85,8 @@ function func_start(){
     $("span#stop").show();
     interval = setInterval("func_timer()", 1000);
   }
+  func_countRecodes();
+  $("#recodeInput").val("RECODE_"+(count+1)); // 미리 모달창에 값 입력해두기
 }
 
 
@@ -113,8 +115,26 @@ function func_countRecodes(){
   count = $("tbody tr").length;
 }
 
-// 오늘 날짜 가져오기
 
+// 오늘 날짜 가져오기
+function func_getToday(){
+  let now = new Date();
+  let year = now.getFullYear();
+  year = String(year).substr(2,2);
+  console.log(typeof year)
+  let month = now.getMonth() + 1;
+  let date = now.getDate();
+  if(month<10){
+    today = year + "/0" + month
+  } else {
+    today = year + "/" + month
+  }
+  if(date<10){
+    today += "/0" + date
+  } else {
+    today += "/" + date
+  }
+}
 
 
 // recode 제목을 입력하고 기록한 경우
@@ -122,9 +142,10 @@ function func_recode(){
   $("#recodeRequest").fadeOut();
   let recodeInput = $("#recodeInput").val();
   func_countRecodes();
+  func_getToday();
 
-  let detail = "<tr><td>"+count+1+"</td>"
-            + "<td>date</td>"
+  let detail = "<tr><td>"+(count+1)+"</td>"
+            + "<td>"+today+"</td>"
             + "<td>"+recodeInput+"</td>"
             + "<td>"+startingTime+"</td></tr>";
   $("tbody").append(detail);
