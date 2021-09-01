@@ -1,5 +1,6 @@
 let interval; // timer interval
 let startingTime; // start 설정한 값
+let count;  // 기록된 갯수
 let today; // 오늘 날짜
 
 
@@ -108,7 +109,9 @@ function func_restart(){
 
 
 // 이미 기록된 리스트 개수 알아오기
-
+function func_countRecodes(){
+  count = $("tbody tr").length;
+}
 
 // 오늘 날짜 가져오기
 
@@ -117,8 +120,10 @@ function func_restart(){
 // recode 제목을 입력하고 기록한 경우
 function func_recode(){
   $("#recodeRequest").fadeOut();
-  let recodeInput = $("#recodeInput");
-  let detail = "<tr></tr><td>1</td>"
+  let recodeInput = $("#recodeInput").val();
+  func_countRecodes();
+
+  let detail = "<tr><td>"+count+1+"</td>"
             + "<td>date</td>"
             + "<td>"+recodeInput+"</td>"
             + "<td>"+startingTime+"</td></tr>";

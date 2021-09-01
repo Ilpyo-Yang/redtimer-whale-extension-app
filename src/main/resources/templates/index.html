@@ -31,7 +31,7 @@
             </header>
             <div class="input-group mb-3" id="timeSetting">
                 <input class="form-control" id="timeInput" type="number" value="15" min="0" max="60" onchange="func_inputTime()">
-                <span class="input-group-text" id="min">min</span>
+                <span class="input-group-text" id="min" onclick="func_countRecodes()">min</span>
                 <span class="input-group-text settingBtn" id="start" onclick="func_start()">Start</span>
                 <span class="input-group-text settingBtn" id="stop" onclick="func_stop()">Stop</span>
                 <span class="input-group-text settingBtn" id="restart" onclick="func_restart()">Restart</span>
@@ -58,7 +58,7 @@
                         <th>No.</th>
                         <th>날짜</th>
                         <th>제목</th>
-                        <th>타이머시간</th>
+                        <th>시간(min)</th>
                     </thead>
                     <tbody></tbody>
                 </table>
@@ -71,7 +71,7 @@
             <span class="out" id="closeModal" data-dismiss="modal" onclick="$('#recodeRequest').fadeOut();">X</span>
             <span>설정한 시간이 끝났습니다!<br>기록을 남기려면 아래 제목을 적어주세요.</br></span>
             <div class="input-group mb-3" id="recodeSave">
-                <input class="form-control" id="recodeInput" type="text" placeholder="RECODE_01"  onchange="func_recode()">
+                <input class="form-control" id="recodeInput" type="text" onchange="func_recode()">
                 <span class="input-group-text" id="recodeBtn" onclick="func_recode()">기록</span>
             </div>
         </div>
