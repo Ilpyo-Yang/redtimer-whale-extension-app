@@ -5,16 +5,16 @@
 
   "description": "분단위 타이머로 시간관리하고 생산성을 높일 수 있습니다.",
   "icons": {
-    "16": "./image/logo.png",
-    "48": "./image/logo.png",
-    "128": "./image/logo.png"
+    "16": "./image/logo16.png",
+    "48": "./image/logo48.png",
+    "128": "./image/logo128.png"
   },
   "default_locale": "ko",
 
   "browser_action": {
     "default_popup": "../templates/index.html",
     "default_icon": {
-      "16": "./image/logo.png"
+      "16": "./image/logo16.png"
     }
   },
   "page_action": {},

@@ -1,0 +1,229 @@
+@font-face {
+  src : url("../font/NanumSquareRoundR.ttf");
+  font-family: "NanumR"
+}
+
+body{
+  font-family: NanumR;
+}
+
+#container{
+  height: 100%;
+  text-align: center;
+  background-color: white;
+  margin: 0 auto;
+}
+#container2{
+  padding: 20px 20px 10px 20px;
+}
+
+header{
+  margin-bottom: 30px;
+  font-size: 15pt;
+  font-weight: bold;
+  text-align: left;
+  line-height: 30px;
+  color: #e3242b;
+}
+#logo{
+  width: 30px;
+  margin-right: 10px;
+  float: left;
+}
+.basicBtn{
+  height: 25px;
+  width: auto;
+  float: right;
+  margin-right: 10px;
+  margin-top: 2.5px;
+  cursor: pointer;
+}
+
+
+/* 타이머 설정하는 구간 */
+#timeSetting{
+  width: 80%;
+  margin: 0 auto;
+}
+#timeInput{
+  width: 15%;
+  float: left;
+  font-size: 16pt;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+}
+.settingBtn{
+  color: white;
+  font-weight: bold;
+  background-color: #e3242b;
+  cursor: pointer;
+}
+span#min{
+  font-weight: bold;
+  background-color: white;
+}
+
+
+
+/* 타이머 */
+#clockContainer{
+  margin: 15px auto;
+  width: 300px;
+  height: 300px;
+}
+#mainClock{
+  border-radius: 50%;
+  position: relative;
+}
+.line{
+  border-top: 2px solid black;
+  width: 220px;
+  position: absolute;
+  margin-top: 50%;
+  margin-left: 13%;
+}
+.line1{
+  z-index: 1;
+}
+.line2{
+  z-index: 3;
+}
+.centerCircle{
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-top: 50%;
+  margin-left: 49.5%;
+  position: absolute;
+  background-color: #ffffff;
+  transform: translate(-50%, -50%);
+}
+#centerCircle1{
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+}
+#centerCircle2{
+  width: 170px;
+  height: 170px;
+  z-index: 4;
+}
+#centerCircle3{
+  width: 30px;
+  height: 30px;
+  z-index: 5;
+  background-color: white;
+  border: 1px solid black;
+}
+#centerCircle4{
+  width: 20px;
+  height: 20px;
+  z-index: 7;
+  background-color: white;
+  border: 1px solid black;
+}
+.rotation{
+  border-top: 2px solid #e3242b;
+  width: 105px;
+  position: absolute;
+  margin-top: 50%;
+  margin-left: 14.5%;
+  opacity: 0.3;
+  z-index: 6;
+}
+
+.number{
+  width: 28px;
+  height: 300px;
+  position: absolute;
+  margin-left: 45%;
+  font-weight: bold;
+  font-size: 18pt;
+  z-index: 7;
+}
+
+
+/* 기록리스트 구간 */
+#recodes{
+  width: 100%;
+  display: inline-block;
+  border-bottom: 2px solid #e3242b;
+  height: 35px;
+  padding: 0 20px;
+  font-size: 12pt;
+  font-weight: bold;
+  text-align: left;
+  color: #e62117;
+}
+#recodes span{
+  line-height: 30px;
+}
+.upDown{
+  width: 15px;
+  float: right;
+  margin: 1% 0 0 0;
+}
+
+.modal{
+  width: 80%;
+  top: 30%;
+  left: 12%;
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.modal-content{
+  background-color: #e3242b;
+  color: white;
+  padding: 7px;
+  font-size: 11pt;
+}
+.modalContainer{
+  width: 80%;
+  margin: 10px auto;
+  font-size: 11pt;
+  font-weight: bold !important;
+}
+.close{
+  margin-left: 95%;
+  width: 25px;
+  height: auto;
+  cursor: pointer;
+}
+#recodeSave{
+  width: 80%;
+  margin: 15px auto;
+}
+#recodeInput, #recodeBtn{
+  display: inline-block;
+  height: 30px;
+}
+#recodeBtn{
+  width: 30%;
+  padding: 3px 0;
+  cursor: pointer;
+}
+
+#selectSound{
+  height: 30px;
+  margin-top: 10px;
+  padding: 0 0 0 10px;
+}
+
+
+#recodeList{
+  height: 150px;
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+table{
+  font-size: 10pt !important;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+}
+
+::-webkit-scrollbar {width: 8px; height: 8px; border: 3px solid #fff; }
+::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {display: block; height: 10px; background-color: #efefef}
+::-webkit-scrollbar-track {background: #efefef; -webkit-border-radius: 10px; border-radius:10px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.2)}
+::-webkit-scrollbar-thumb {height: 50px; width: 50px; background: #e3242b; -webkit-border-radius: 8px; border-radius: 8px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.1)}

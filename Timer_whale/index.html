@@ -1,0 +1,84 @@
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="container">
+        <div id="container2">
+            <header>
+                <img id="logo" src="image/logo.png"/>RedTimer
+                <img id="on" class="basicBtn" src="./image/on.png"/>
+                <img id="off" class="basicBtn" src="./image/off.png"/>
+            </header>
+            <div class="input-group mb-3" id="timeSetting">
+                <input class="form-control" id="timeInput" type="number" value="15" min="0" max="60">
+                <span class="input-group-text" id="min">min</span>
+                <span class="input-group-text settingBtn" id="start">Start</span>
+                <span class="input-group-text settingBtn" id="stop">Stop</span>
+                <span class="input-group-text settingBtn" id="restart">Restart</span>
+            </div>
+            <div id="clockContainer">   <!--타이머-->
+                <div id="mainClock">
+                    <div class="centerCircle" id="centerCircle1"></div>
+                    <div class="centerCircle" id="centerCircle2"></div>
+                    <div class="centerCircle" id="centerCircle3"></div>
+                    <div class="centerCircle" id="centerCircle4"></div>
+                    <div id="timerCircle"></div>   <!--시간변동을 보여주는 모형-->
+                </div>
+            </div>
+        </div>
+        <footer> <!--타이머 내용기록-->
+            <div id="recodes">
+                <span>Recodes</span>
+                <img src="image/down.png" class="upDown" id="down"/>
+                <img src="image/up.png" class="upDown" id="up"/>
+            </div>
+            <div id="recodeList">
+                <table class="table table-sm">
+                    <thead>
+                        <th>No.</th>
+                        <th>날짜</th>
+                        <th>제목</th>
+                        <th>시간(min)</th>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </footer>
+    </div>
+
+    <div class="modal" id="recodeRequest">  <!--기록저장여부 모달창-->
+        <div class="modal-content modal-xs">
+            <div class="modalContainer">
+                <img class="close" id="closeRecodeModal" src="./image/close.png"/><br>
+                <span>설정한 시간이 끝났습니다!<br>기록을 남기려면 제목을 적어주세요.</br></span>
+                <div class="input-group mb-3" id="recodeSave">
+                    <input class="form-control" id="recodeInput" type="text">
+                    <span class="input-group-text" id="recodeBtn">기록</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="alertModal">  <!--타이머세팅 alert 모달창-->
+        <div class="modal-content modal-xs">
+            <div class="modalContainer">
+                <img class="close" id="closeAlertModal" src="./image/close.png"/><br>
+                <span>타이머 값은 1~60의 숫자로 입력해주세요!</span>
+            </div>
+        </div>
+    </div>
+
+    <audio id="timerEndSound"> <source src="audio/sound1.mp3" type="audio/mp3"> </audio>
+
+</body>
+</html>

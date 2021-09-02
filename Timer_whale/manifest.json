@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "RedTimer",
+  "version": "1.0.0",
+  "description": "분단위 타이머로 시간관리하는 생산성 사이드바앱",
+  "icons": {
+    "16": "./image/logo.png",
+    "48": "./image/logo.png",
+    "128": "./image/logo.png"
+  },
+  "sidebar_action": {
+    "default_page": "index.html",
+    "default_icon": {
+      "16": "image/logo.png"
+    }
+  },
+  "permissions": [
+    "<all_urls>"
+  ]
+}
