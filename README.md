@@ -25,5 +25,4 @@
 + OS: Window10
 + IDE: IntelliJ IDEX 2021.1.2 x64
 + Language: Java 11, HTML5,CSS3, JS
-+ Middleware: Tomcat9, Apache2
 + Framework: Spring Gradle
