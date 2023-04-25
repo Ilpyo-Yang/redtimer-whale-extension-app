@@ -2,6 +2,10 @@
 
 <br>
 
+![image](https://user-images.githubusercontent.com/67682215/234194124-b58391d6-578d-41da-b60c-78c428bc4435.png)
+
+<br>
+
 ### 프로젝트 개요
 > 인터넷을 사용하면서 분단위로 설정한 시간이 흐르는 것을 볼 수 있고 기록할 수 있는 타이머입니다. 알람 on/off 기능이 있습니다. 
 <br>
